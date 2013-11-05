@@ -1,0 +1,22 @@
+== README FILE == 
+
+all the three tasks are in their respective folders. All the folders contain a makefile which can be used to build the drivers as well as  the test applications. In the first two tasks, the application will write 2 pages to the EEPROM. For the third task, the application will ask you how many pages to write.
+
+to compile any of the task just run "make" to clean up, just run clean. Following is the description of files and running instruction of each tasks.
+
+task1:	
+	file			significance
+	eeprom_operations.c	contains EEPROM_write, EEPROM_read, EEPROM_seek operations.     
+	eeprom_test.c		test file for above operations.
+	eeprom_test		the executable for running
+	Makefile		makefile to compile and clean up. 
+
+task2 and task3: (the name of files are same in both the folders.)
+	file			significance	
+	i2c-flash.c		contains the driver.
+	i2c-flash_test.c	contains the test application.
+	i2c-flash-test		executable for test application.
+	i2c-flash.ko		kernel module for the driver.
+	Makefile		to build and clean all the files. 
+
+Note: for task2 and task3 you may have to change KDIR to your kernel source tree. The default path is the one used by virtual machines in lab.
